@@ -1,0 +1,98 @@
+.salider_full_div {
+  height: 850px;
+  position: relative;
+  overflow: hidden;
+  background: url("full_uni_pic.png") center/cover no-repeat;
+  background-size: 100% 100%;
+  /* background: black; */
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: inset 6px 6px 17px rgba(255, 255, 255, 0.1),
+    inset -6px -6px 7px white;
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  height: 850px;
+  width: 1850px;
+  transform: translateY(-50%);
+  color: #fff;
+  padding: 20px 40px;
+  font-size: 20px;
+  border-radius: 10px;
+  opacity: 0;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.box1 {
+  background-image: url("resurch.jpg");
+  color: white;
+  /* text-align: center;
+  align-content: center; */
+  font-size: 25px;
+  font-weight: 100%;
+}
+.box2 {
+  /* background: #4c9eff; */
+  background-image: url("education.jpg");
+  color: white;
+  /* text-align: center;
+  align-content: center; */
+  font-size: 25px;
+  font-weight: 100%;
+}
+.box3 {
+  background-image: url("the_uni.jpg");
+  color: white;
+  /* text-align: center;
+  align-content: center; */
+  font-size: 25px;
+  font-weight: 100%;
+}
+.box4 {
+  background-image: url("universaty_top.jpg");
+  color: white;
+  /* text-align: center;
+  align-content: center; */
+  font-size: 25px;
+  font-weight: 100%;
+}
+.box5 {
+  background-image: url("lab.png");
+  color: white;
+  /* text-align: center;
+  align-content: center; */
+  font-size: 25px;
+  font-weight: 100%;
+}
+@keyframes slideIn {
+  0% {
+    left: 100%;
+    opacity: 0;
+  }
+  20% {
+    left: 50%;
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%);
+  } /* slide in */
+  80% {
+    left: 50%;
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%);
+  } /* stay 5s */
+  100% {
+    left: -100%;
+    opacity: 0;
+    transform: translateX(0) translateY(-50%);
+  } /* slide out */
+}
+.animate {
+  animation: slideIn 20s linear forwards;
+}

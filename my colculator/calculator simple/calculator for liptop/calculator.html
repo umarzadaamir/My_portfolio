@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculator__uz . com</title>
+    <link rel="stylesheet " href="calculator.css" />
+  </head>
+  <body>
+    <div class="main_div">
+      <div id="online_calculator_div">
+        <div class="online_calculator_div_h3">
+          <h3>calculator__uz . com</h3>
+        </div>
+        <div class="input_full_div">
+          <div class="input_div">
+            <div class="copiy_div">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/178/178921.png"
+                height="15"
+                width="15"
+              />
+            </div>
+            <div class="only_input_div">
+              <input id="only_input" type="txt" placeholder=" 0 " readonly />
+            </div>
+            <hr />
+            <div class="writting_resulte_div">
+              <input
+                id="second_input_result"
+                type="txt"
+                placeholder="0"
+                readonly
+              />
+            </div>
+          </div>
+        </div>
+        <div class="accounting_div">
+          <a href="online calculator.html" style="color: rgb(243, 104, 180)"
+            >mathematical</a
+          >
+        </div>
+        <div class="full_buttons_continur">
+          <div class="second_buttons_continur">
+            <button onclick="setopration('MC')" id="mc_btn">MC</button>
+            <button onclick="setopration('MR')" id="mr_btn">MR</button>
+            <button onclick="setopration('M-')" id="m_subtraction_btn">
+              M-
+            </button>
+            <button onclick="setopration('M+')" id="m_plus_btn">M+</button>
+            <button onclick="setopration('')" id="under_root_btn">(</button>
+            <button onclick="setopration('')" id="mu_btn">)</button>
+            <button onclick="squareRoot()" id="plus_subraction_btn">√</button>
+            <button onclick="appendtodisplay('7')" id="seven_btn">7</button>
+            <button onclick="appendtodisplay('8')" id="eight_btn">8</button>
+            <button onclick="appendtodisplay('9')" id="nine_btn">9</button>
+            <button onclick="setopration('/')" id="division_btn">/</button>
+            <button onclick="setopration('%')" id="modolus_btn">%</button>
+            <button onclick="removegitit('~')" id="arrow_btn">~</button>
+            <button onclick="appendtodisplay('4')" id="four_btn">4</button>
+            <button onclick="appendtodisplay('5')" id="five_btn">5</button>
+            <button onclick="appendtodisplay('6')" id="six_btn">6</button>
+            <button onclick="setopration('*')" id="multiplay_btn">*</button>
+            <button onclick="setopration('-')" id="subtraction_btn">-</button>
+            <button onclick="restedisplay('AC')" id="ac_btn">AC</button>
+            <button onclick="appendtodisplay('1')" id="one_btn">1</button>
+            <button onclick="appendtodisplay('2')" id="two_btn">2</button>
+            <button onclick="appendtodisplay('3')" id="three_btn">3</button>
+            <button onclick="setopration('+')" id="puls_btn">+</button>
+            <button onclick="calculateResult()" id="equle_btn">=</button>
+            <button onclick="restedisplay('C')" id="c_btn">C</button>
+            <button onclick="appendtodisplay('0')" id="zero_btn">0</button>
+            <button onclick="appendtodisplay('00')" id="duble_zero_btn">
+              00
+            </button>
+            <button onclick="appendtodisplay('.')" id="dut_btn">.</button>
+          </div>
+        </div>
+        <div class="pc_moblie_ful_div">
+          <div class="pc_moblie_div">
+            <p>
+              Pc /
+              <a href="../../calculator_mobile/calculator.html"
+                >Mobile Calculator</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="select_option_full_div">
+      <div class="select_option_div_one">
+        <select id="select_one">
+          <option>Big size</option>
+          <option>normal size +90%</option>
+          <option>normal size +80%</option>
+          <option>normal size +70%</option>
+          <option>normal size +60%</option>
+          <option>normal size +50%</option>
+          <option>normal size +40%</option>
+          <option>normal size +30%</option>
+          <option>normal size +20%</option>
+          <option>normal size +10%</option>
+          <option>normal size</option>
+          <option>normal size -10%</option>
+          <option>normal size -20%</option>
+          <option>normal size -30%</option>
+          <option>normal size -40%</option>
+          <option>normal size -50%</option>
+          <option>normal size -60%</option>
+          <option>normal size -70%</option>
+          <option>normal size -80%</option>
+          <option>normal size -90%</option>
+          <option>very small</option>
+          <option>Very, very small</option>
+        </select>
+      </div>
+      <div class="select_option_div_two">
+        <div>
+          <a
+            href="../mob%20calculator/mob_calculator.html"
+            style="color: #4db6ac; text-decoration: none"
+          >
+            Mobile Calculator
+          </a>
+        </div>
+      </div>
+    </div>
+    <script src="calculator.js"></script>
+  </body>
+</html>

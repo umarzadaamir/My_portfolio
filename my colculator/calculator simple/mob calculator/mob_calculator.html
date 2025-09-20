@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Mobile Calculator</title>
+    <link rel="stylesheet" href="mob_calculator.css" />
+  </head>
+  <body>
+    <div id="calculator">
+      <div id="display-container">
+        <input type="text" id="display" readonly placeholder="0" />
+      </div>
+      <div id="buttons-container">
+        <button class="btn function" id="clear">AC</button>
+        <button class="btn function" id="delete">DEL</button>
+        <button class="btn operator" data-op="/">÷</button>
+        <button class="btn operator" data-op="*">×</button>
+
+        <button class="btn number" data-num="7">7</button>
+        <button class="btn number" data-num="8">8</button>
+        <button class="btn number" data-num="9">9</button>
+        <button class="btn operator" data-op="-">−</button>
+
+        <button class="btn number" data-num="4">4</button>
+        <button class="btn number" data-num="5">5</button>
+        <button class="btn number" data-num="6">6</button>
+        <button class="btn operator" data-op="+">+</button>
+
+        <button class="btn number" data-num="1">1</button>
+        <button class="btn number" data-num="2">2</button>
+        <button class="btn number" data-num="3">3</button>
+        <button class="btn equal" id="equals">=</button>
+
+        <button class="btn number zero" data-num="0">0</button>
+        <button class="btn number" data-num=".">.</button>
+        <button class="btn number">
+          <a
+            href="../calculator for liptop/calculator.html"
+            style="color: #4db6ac; text-decoration: none"
+            >back</a
+          >
+        </button>
+      </div>
+    </div>
+    <script src="mob_calculator.js"></script>
+  </body>
+</html>

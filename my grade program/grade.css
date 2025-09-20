@@ -1,0 +1,131 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #121212;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.one-continor {
+  background-color: #000000;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #00ff94, 0 0 40px #00ff94 inset;
+  width: 400px;
+  height: 530px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid #00ff94;
+  margin-top: 50px;
+}
+h1 {
+  color: #00ff94;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+.sreach_continor {
+  width: 100%;
+  margin-bottom: 20px;
+}
+#input {
+  width: 100%;
+  height: 60px;
+  background-color: #00ffff;
+  border: 5px solid black;
+  border-radius: 15px;
+  color: gray;
+  font-size: 1.5rem;
+  text-align: center;
+  box-shadow: 0 0 10px black;
+}
+.result_place {
+  margin-top: 10px;
+  height: 40px;
+  width: 170px;
+  background-color: bisque;
+  border-radius: 10px;
+  border-left: 2px dotted black;
+  border-right: 2px dotted black;
+  border: 4px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+  color: black;
+  box-shadow: 0 0 10px black;
+}
+.btn_continor {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+button {
+  background-color: #1a1a1a;
+  border: none;
+  border-radius: 10px;
+  color: #00ff94;
+  font-size: 1.5rem;
+  padding: 15px 0;
+  box-shadow: 0 0 10px #00ff94;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #00ff94;
+  color: #121212;
+}
+.result_btn {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.result_btn button {
+  width: 48%;
+  background-color: #d6a9a9;
+  color: white;
+  font-size: 1.2rem;
+  box-shadow: 0 0 10px #bfb8a5;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.result_btn button:hover {
+  background-color: #c48a8a;
+  color: white;
+}
+#qq {
+  position: absolute;
+  top: 20px;
+  right: 450px;
+  margin-bottom: 20px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+}
+#mode {
+  background-color: green;
+  border: none;
+  border-radius: 15px 0 0 15px;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 20px;
+  box-shadow: 0 0 10px black;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#mode:hover {
+  background-color: darkgreen;
+  color: white;
+}

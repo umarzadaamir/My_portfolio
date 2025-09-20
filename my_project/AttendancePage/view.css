@@ -1,0 +1,42 @@
+.pic_select {
+  width: 250px;
+}
+.pic_btn {
+  width: 250px;
+  font-family: monospace;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  position: relative;
+  color: #ddd;
+  color: black;
+  text-align: center;
+  overflow: hidden;
+}
+.div {
+  justify-items: end;
+}
+.profile_full_div {
+  justify-items: center;
+  margin-bottom: 5px;
+}
+.btn_destory_div {
+  /* border: 2px solid black; */
+  height: 50px;
+  width: 350px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: end;
+  align-items: center;
+}
+
+.btn_destory {
+  width: 100px;
+}
+.profile {
+  border: none;
+}
