@@ -36,7 +36,7 @@ $total_students = $row['total_students'];
   <link rel="stylesheet" href="salider.css">
 </head>
 <style>
- 
+
 </style>
 
 <body>
