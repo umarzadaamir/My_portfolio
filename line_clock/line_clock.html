@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analog Clock with Dark Mode</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #fff;
+        transition: background 0.3s, color 0.3s;
+        flex-direction: column;
+      }
+
+      .clock {
+        width: 300px;
+        height: 300px;
+        border: 10px solid #000;
+        border-radius: 50%;
+        position: relative;
+        background: #fff;
+      }
+      .number {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(var(--rotation))
+          translate(120px) rotate(calc(-1 * var(--rotation)));
+        transform-origin: center;
+        font-weight: 700;
+        user-select: none;
+      }
+
+      .hand {
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        transform-origin: bottom;
+        transform: translateX(-50%) rotate(90deg);
+        background: #000;
+      }
+
+      .hour {
+        width: 8px;
+        height: 80px;
+      }
+
+      .minute {
+        width: 6px;
+        height: 110px;
+      }
+
+      .second {
+        width: 2px;
+        height: 130px;
+        background: red;
+      }
+
+      body.dark {
+        background: #111;
+        color: white;
+      }
+
+      body.dark .clock {
+        border-color: white;
+        background: #222;
+      }
+
+      #mode-switch {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 18px;
+        border: none;
+        cursor: pointer;
+        background: #000;
+        color: #fff;
+        border-radius: 8px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      body.dark #mode-switch {
+        background: #fff;
+        color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clock" id="clock">
+      <div class="hand hour" id="hour"></div>
+      <div class="hand minute" id="minute"></div>
+      <div class="hand second" id="second"></div>
+      <div class="number" style="--rotation: -60deg">1</div>
+      <div class="number" style="--rotation: -30deg">2</div>
+      <div class="number" style="--rotation: 0deg">3</div>
+      <div class="number" style="--rotation: 30deg">4</div>
+      <div class="number" style="--rotation: 60deg">5</div>
+      <div class="number" style="--rotation: 90deg">6</div>
+      <div class="number" style="--rotation: 120deg">7</div>
+      <div class="number" style="--rotation: 150deg">8</div>
+      <div class="number" style="--rotation: 180deg">9</div>
+      <div class="number" style="--rotation: 210deg">10</div>
+      <div class="number" style="--rotation: 240deg">11</div>
+      <div class="number" style="--rotation: 270deg">12</div>
+    </div>
+    <button id="mode-switch">Dark Mode</button>
+    <script>
+      const hourHand = document.getElementById("hour");
+      const minuteHand = document.getElementById("minute");
+      const secondHand = document.getElementById("second");
+      const modeSwitch = document.getElementById("mode-switch");
+
+      function updateClock() {
+        const now = new Date();
+        const seconds = now.getSeconds();
+        const minutes = now.getMinutes();
+        const hours = now.getHours();
+
+        const secondDeg = (seconds / 60) * 360;
+        const minuteDeg = (minutes / 60) * 360 + (seconds / 60) * 6;
+        const hourDeg = (hours / 12) * 360 + (minutes / 60) * 30;
+
+        secondHand.style.transform = `translateX(-50%) rotate(${secondDeg}deg)`;
+        minuteHand.style.transform = `translateX(-50%) rotate(${minuteDeg}deg)`;
+        hourHand.style.transform = `translateX(-50%) rotate(${hourDeg}deg)`;
+      }
+      setInterval(updateClock, 1000);
+      updateClock();
+      modeSwitch.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+        modeSwitch.textContent = document.body.classList.contains("dark")
+          ? "Light Mode"
+          : "Dark Mode";
+      });
+    </script>
+  </body>
+</html>

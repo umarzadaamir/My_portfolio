@@ -45,9 +45,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 <style>
+    canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100%;
+        z-index: -1;
+    }
 </style>
 
 <body>
+
     <button id="theme-toggle">🌙</button>
     <nav>
         <ul>
@@ -74,7 +83,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </li>
         </ul>
     </nav>
+
     <section class="intro-section">
+        <canvas id="rain"></canvas>
         <div class="intro-content">
             <h1 class="moving-name">Hi, It's <span class="highlight">Me umar zada amir</span></h1>
             <h2>I'm a <span id="typed"></span></h2>
@@ -187,6 +198,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <p> JavaScript grade program.</p>
                 <a href="../../my grade program\grade.html" class="btn project_btn">button</a>
             </div>
+            <!-- kldklskd -->
+            <div class="project-card">
+                <h3>clock</h3>
+                <img src="line_clock.png" alt="">
+                <p> JavaScript clock program.</p>
+                <a href="../../line_clock\line_clock.html" class="btn project_btn">button</a>
+            </div>
         </div>
         </div>
     </section>
@@ -242,6 +260,103 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </footer>
     </section>
     <script src="fornt_page.js"></script>
+    <script>
+        const canvas = document.getElementById("rain");
+        const ctx = canvas.getContext("2d");
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+
+        class RainDrop {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * -canvas.height;
+                this.length = Math.random() * 20 + 10;
+                this.speed = Math.random() * 5 + 4;
+                this.opacity = Math.random() * 0.3 + 0.2;
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.strokeStyle = `rgba(0, 200, 255, ${this.opacity})`;
+                ctx.lineWidth = 2;
+                ctx.moveTo(this.x, this.y);
+                ctx.lineTo(this.x, this.y + this.length);
+                ctx.stroke();
+            }
+
+            update() {
+                this.y += this.speed;
+                if (this.y > canvas.height) {
+                    this.y = Math.random() * -100;
+                    this.x = Math.random() * canvas.width;
+                }
+                this.draw();
+            }
+        }
+
+
+        class Ripple {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+                this.radius = 1;
+                this.maxRadius = 30;
+                this.alpha = 1;
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.strokeStyle = `rgba(0, 200, 255, ${this.alpha})`;
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.stroke();
+            }
+
+            update() {
+                if (this.radius < this.maxRadius) {
+                    this.radius += 0.5;
+                    this.alpha -= 0.02;
+                    this.draw();
+                }
+            }
+        }
+
+        let drops = [];
+        let ripples = [];
+
+        for (let i = 0; i < 100; i++) {
+            drops.push(new RainDrop());
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            drops.forEach((drop) => {
+                drop.update();
+
+                if (drop.y + drop.length >= canvas.height) {
+                    ripples.push(new Ripple(drop.x, canvas.height - 2));
+                }
+            });
+
+            ripples.forEach((r, index) => {
+                r.update();
+                if (r.alpha <= 0) {
+                    ripples.splice(index, 1);
+                }
+            });
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+
+        window.addEventListener("resize", () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    </script>
 </body>
 
 </html>
