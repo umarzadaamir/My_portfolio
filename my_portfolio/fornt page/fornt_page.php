@@ -87,7 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <section class="intro-section">
         <canvas id="rain"></canvas>
         <div class="intro-content">
-            <h1 class="moving-name">Hi, It's <span class="highlight">Me umar zada amir</span></h1>
+            <h1 class="moving-name">Hi, I'm <span class="highlight"> umar zada amir</span></h1>
             <h2>I'm a <span id="typed"></span></h2>
             <p>
                 With a strong focus on building reliable, scalable, and efficient server-side applications.
@@ -226,7 +226,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <footer class="footer">
             <div class="footer-container">
                 <div class="footer-about">
-                    <h2>Mian Umar Zada Amir</h2>
+                    <h2> Umar Zada Amir</h2>
                     <p>Backend Developer passionate about building scalable and modern web applications with PHP, Laravel, Node.js, and databases.</p>
                 </div>
                 <div class="footer-links">
@@ -280,7 +280,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             draw() {
                 ctx.beginPath();
                 ctx.strokeStyle = `rgba(0, 200, 255, ${this.opacity})`;
-                ctx.lineWidth = 2;
+                ctx.lineWidth = 1;
                 ctx.moveTo(this.x, this.y);
                 ctx.lineTo(this.x, this.y + this.length);
                 ctx.stroke();
