@@ -12,7 +12,7 @@
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
   position: relative;
   color: #ddd;
-  color: black;
+
   text-align: center;
   overflow: hidden;
 }
@@ -24,7 +24,7 @@
   margin-bottom: 5px;
 }
 .btn_destory_div {
-  /* border: 2px solid black; */
+
   height: 50px;
   width: 350px;
   display: flex;

@@ -10,10 +10,10 @@ input[type="number"]::-webkit-outer-spin-button {
   font-family: "Poppins", sans-serif;
 }
 body {
-  background-image: url("uni.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: #1e1e3f;
 }
 .table {
   margin-top: 9px;
@@ -27,14 +27,12 @@ body {
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
   position: relative;
   color: #ddd;
-  color: black;
   text-align: center;
   overflow: hidden;
 }
 .container {
   width: 1400px;
 }
-
 .search {
   text-align: center;
   padding: 10px;
@@ -50,7 +48,6 @@ body {
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
   position: relative;
   color: #ddd;
-  color: black;
   text-align: center;
   overflow: hidden;
 }
@@ -75,7 +72,6 @@ body {
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
   position: relative;
   color: #ddd;
-  color: black;
   text-align: center;
   overflow: hidden;
 }
@@ -94,7 +90,6 @@ body {
   align-items: center;
   width: 100px;
   height: 40px;
-  color: #4d4d4d;
   padding: 15px 15px;
   font-family: monospace;
   font-size: 18px;
@@ -131,7 +126,7 @@ body {
   align-items: center;
   width: 110px;
   height: 40px;
-  color: #4d4d4d;
+  color: white;
   padding: 15px 20px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px) !important;
@@ -140,7 +135,6 @@ body {
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
   position: relative;
   color: #ddd;
-  color: black;
   overflow: hidden;
 }
 
@@ -152,7 +146,7 @@ button:hover {
   font-size: 1rem;
 }
 .offcanvas-start {
-  color: #4d4d4d;
+  color: white;
   font-family: monospace;
   background-color: #e0e0e0;
   font-family: monospace;
@@ -162,7 +156,7 @@ button:hover {
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
   color: #ddd;
-  color: black;
+
 }
 .offcanvas-custom {
   width: 280px !important;
@@ -171,7 +165,8 @@ button:hover {
   border: 2px solid rgb(206, 206, 206);
   width: 300px;
   text-align: center;
-  color: #4d4d4d;
+ 
+  color: white;
   font-family: monospace;
   font-family: monospace;
   background: rgba(255, 255, 255, 0.1);
@@ -182,7 +177,8 @@ button:hover {
 }
 .btn_uplode {
   text-align: center;
-  color: #4d4d4d;
+
+  color: white;
   font-family: monospace;
   background-color: #e0e0e0;
   font-family: monospace;
@@ -205,7 +201,8 @@ button:hover {
   color: white !important;
 }
 .h2 {
-  color: black !important;
+
+  color: white !important;
 }
 
 .a {
@@ -220,11 +217,11 @@ button:hover {
 .div {
   justify-items: end;
 }
-/* kdlfskd */
+
 .btn_destory_div {
   display: flex;
   flex-wrap: wrap;
-  /* border: 2px solid black; */
+
 }
 
 .btn_destory {

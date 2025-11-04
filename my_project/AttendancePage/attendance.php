@@ -108,7 +108,7 @@ if (isset($_POST['btn']) && isset($_POST['roll_no']) && !empty($_POST['roll_no']
 				$stmt2->bind_param("isssss", $roll_no, $date, $in_date, $in_time, $out_date, $out_time);
 				$stmt2->execute();
 
-				$message = "<p style='color:green;'> New attendance record created for Roll No $roll_no OUT → $out_date $out_time_display</p>";
+				$message = "<p style='color:white;'> New attendance record created for Roll No $roll_no OUT → $out_date $out_time_display</p>";
 			}
 		} else {
 			$out_date = date('Y-m-d');
@@ -131,9 +131,9 @@ if (isset($_POST['btn']) && isset($_POST['roll_no']) && !empty($_POST['roll_no']
 					$stmt2->bind_param("isssss", $roll_no, $out_date_var, $null_var1, $null_var2, $out_date_var, $out_time_db_var);
 					$stmt2->execute();
 
-					$message = "<p style='color:;'> Roll No $roll_no OUT marked → $out_date $out_time_display</p>";
+					$message = "<p style='color:white;'> Roll No $roll_no OUT marked → $out_date $out_time_display</p>";
 				} else {
-					$message = "<p style='color:orange;'> Roll No $roll_no not found in attendance!</p>";
+					$message = "<p style='color:red;'> Roll No $roll_no not found in attendance!</p>";
 				}
 			} else {
 				$message = "<p style='color:red;'> Failed to update record</p>";
@@ -184,7 +184,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['rollno']) && !empty($
 				$stmt2->bind_param("isssss", $rollno, $date, $in_date, $in_time, $out_date, $out_time);
 				$stmt2->execute();
 
-				$message = "<p style='color:green;'> New attendance record created for Roll No $rollno IN → $in_date $in_time_display</p>";
+				$message = "<p style='color:white;'> New attendance record created for Roll No $rollno IN → $in_date $in_time_display</p>";
 			}
 		} else {
 			$in_date = date("Y-m-d");
@@ -207,7 +207,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['rollno']) && !empty($
 				$stmt2->bind_param("isssss", $rollno, $in_date_var, $in_date_var, $in_time_db_var, $null_var1, $null_var2);
 				$stmt2->execute();
 
-				$message = "<p style='color:weight;'> Roll No $rollno IN marked → $in_date $in_time_display</p>";
+				$message = "<p style='color:white;'> Roll No $rollno IN marked → $in_date $in_time_display</p>";
 			} else {
 				$message = "<p style='color:red;'> Roll No not found in attendance!</p>";
 			}
@@ -257,7 +257,7 @@ if (isset($_POST['btn']) && isset($_POST['registration_id']) && !empty($_POST['r
 			$stmt2->bind_param("isssss", $registration_id, $date, $in_date, $in_time, $out_date, $out_time);
 			$stmt2->execute();
 
-			$message = "<p style='color:weight;'> Attendance inserted for Registration ID $registration_id → $date $in_time</p>";
+			$message = "<p style='color:white;'> Attendance inserted for Registration ID $registration_id → $date $in_time</p>";
 		}
 	}
 }
@@ -354,9 +354,10 @@ if (isset($_POST['btn']) && isset($_POST['registration_id']) && !empty($_POST['r
 				</div>
 			</div>
 		</div>
+		
 		<div class="table-responsive">
 			<form action="attend.php" method="get">
-				<table class="table table-bordered table-hover align-middle">
+				<table class="table table-bordered  align-middle">
 					<thead class="table-light">
 						<tr class="">
 							<th>Roll no</th>

@@ -8,11 +8,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("../acadmy.jpg") no-repeat center center/cover;
+  /* background: url("../acadmy.jpg") no-repeat center center/cover; */
+  background-color: #1e1e4f;
 }
 .login-container {
   width: 700px;
-  margin-bottom: 200px;
+  margin-bottom: 80px;
+  margin-top: 80px;
   color: black;
   padding: 15px 40px;
   font-family: monospace;

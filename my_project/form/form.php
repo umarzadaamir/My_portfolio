@@ -55,8 +55,8 @@ $total_students = $row['total_students'];
   <header class="hero" id="hero">
     <div class="hero-bg" style="background-image: url('uni.jpg');"></div>
     <div class="hero-overlay"></div>
-    <div class="hero-inner">
-      <h1 class="hero-title">
+    <div class="hero-inner ">
+      <h1 class="hero-title ">
         University of Agriculture Peshawar
         <div class="typewriter-container">
           <span class="typewriter-text accent" id="typewriter-text"></span>
@@ -70,8 +70,8 @@ $total_students = $row['total_students'];
         Inspiring knowledge · shaping futures · leading research
       </p>
       <div class="hero-ctas">
-        <button class="btn registration"><a href="../registration_from/registor.php" class="btn">registration </a></button>
-        <button class="btn login"> <a href="../login/log.php" class="btn">login </a></button>
+        <button class="btn registration "><a href="../registration_from/registor.php" class="btn text-white">registration </a></button>
+        <button class="btn login"> <a href="../login/log.php" class="btn text-white">login </a></button>
       </div>
     </div>
     <svg

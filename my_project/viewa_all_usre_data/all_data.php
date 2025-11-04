@@ -124,17 +124,17 @@ if (isset($_GET['id'])) {
                 </form>
             </div>
         </div>
-        <table class="table table-striped table-bordered">
+        <table class="table  table-bordered">
             <thead class="table-dark">
                 <tr>
-                    <th>id</th>
-                    <th>Name</th>
-                    <th>father name</th>
-                    <th>Department</th>
-                    <th>In Date</th>
-                    <th>In Time</th>
-                    <th>Out Date</th>
-                    <th>Out Time</th>
+                    <th  class="text-white">id</th>
+                    <th class="text-white">Name</th>
+                    <th class="text-white">father name</th>
+                    <th class="text-white">Department</th>
+                    <th class="text-white">In Date</th>
+                    <th class="text-white">In Time</th>
+                    <th class="text-white">Out Date</th>
+                    <th  class="text-white">Out Time</th>
                 </tr>
             </thead>
             <tbody>

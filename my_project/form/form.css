@@ -11,7 +11,7 @@
 }
 body {
   font-family: "Poppins", system-ui, -apple-system, sans-serif;
-  color: #0f172a;
+  /* color: #0f172a; */
   margin: 0;
   padding: 0;
   background: linear-gradient(180deg, #f3f7fb, #eef6ff);
@@ -113,6 +113,7 @@ body {
   inset: 0;
 }
 .hero-inner {
+  margin-top: 70px;
   position: relative;
   z-index: 2;
   max-width: 800px;
@@ -148,7 +149,8 @@ body {
   z-index: 1;
 }
 .registration {
-  color: black;
+  /* background-color: black  ; */
+  color: white !important;
   height: 60px;
   width: 150px;
   border-radius: 30px;
@@ -160,7 +162,7 @@ body {
   -webkit-backdrop-filter: blur(12px) !important;
   border: 2px solid rgba(255, 255, 255, 0.1);
   box-shadow: inset 6px 6px 17px rgba(255, 255, 255, 0.1),
-    inset -6px -6px 7px white;
+    inset -6px -6px 7px rgb(17, 17, 17);
 }
 .registration:hover {
   background: none;
@@ -169,11 +171,12 @@ body {
   -webkit-backdrop-filter: blur(3px);
   border: 2px solid rgba(255, 255, 255, 0.1);
   box-shadow: inset 6px 6px 17px rgba(255, 255, 255, 0.1),
-    inset -6px -6px 7px black;
+    inset -6px -6px 10px black;
 }
 .login {
   background: none;
   color: black;
+  color: white !important;
   height: 60px;
   width: 150px;
   border-radius: 30px;
@@ -183,7 +186,7 @@ body {
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(1px);
   box-shadow: inset 6px 6px 17px rgba(255, 255, 255, 0.1),
-    inset -6px -6px 7px white;
+    inset -6px -6px 7px rgb(16, 16, 16);
 }
 .login:hover {
   background: none;
@@ -192,7 +195,7 @@ body {
   -webkit-backdrop-filter: blur(3px);
   border: 2px solid rgba(255, 255, 255, 0.1);
   box-shadow: inset 6px 6px 17px rgba(255, 255, 255, 0.1),
-    inset -6px -6px 7px black;
+    inset -6px -6px 10px black;
 }
 /* HERO */
 .hero {

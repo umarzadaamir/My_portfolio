@@ -66,7 +66,7 @@ if (isset($_GET['id'])) {
     <link rel="stylesheet" href="view.css" />
 </head>
 <style>
-   
+
 </style>
 
 <body class="p-4">
@@ -103,8 +103,8 @@ if (isset($_GET['id'])) {
         </form>
     </div>
     <div class="container">
-        <h3 class="mb-3 attendance">User Attendance Record</h3>
-        <table class="table table-striped table-bordered">
+        <h3 class="mb-3 text-white attendance">User Attendance Record</h3>
+        <table class="table  table-bordered">
             <thead class="table-dark">
                 <tr>
                     <th>Roll no</th>
